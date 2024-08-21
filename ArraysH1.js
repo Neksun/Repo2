@@ -94,4 +94,26 @@ var ejemplomap= EpicArraynumeros.map(function (num) {
 
 ///////
 
+////////////////Aplica una función simultáneamente contra un acumulador y cada elemento de un array (de derecha a izquierda) para reducirlo a un único valor.
+const cadenaNumeros = EpicArraynumeros.reduceRight((acc, num) => acc + num, '');
+console.log(cadenaNumeros); // 87654321
+////////7reverse pone alrevez
+const reversed = EpicArrayStuff.reverse();
+console.log('reversed:', reversed);
+///////////
+console.log(EpicArrayStuff.length);
+///////////////
+EpicArrayStuff.splice(2, 0, 'mandarina');
+console.log(EpicArrayStuff);
+//////////////
+const numerosstring = EpicArraynumeros.toLocaleString();
+console.log(numerosstring);
+/////////////
+console.log(EpicArraynumeros.toString());
+/////////////
+var iterador = EpicArrayStuff.values();
+
+for (let Helado of iterador) {
+  console.log(Helado);
+}
 
