@@ -15,7 +15,7 @@ class People{
       dequeue() {
         if (this.queue.length > 0) {
           const Peoplern = this.queue.shift(); 
-          console.log("Atendiendo a:", Peoplern.name, "llegó a las:", Peoplern.arrivalTime);
+          console.log("Atendiendo a:", Peoplern.name, "Tiempo de llegada:", Peoplern.arrivalTime);
           return Peoplern;
         } else {
           console.log("No hay datos.");
