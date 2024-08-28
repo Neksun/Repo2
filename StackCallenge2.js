@@ -8,23 +8,29 @@ class Books{
 
     }
 }
+// Crear la pila de libros
+let bookStack = [];
 
-let Book1= new Books('Crepusculo',1,'Charlote','el buho');
-let Book2= new Books('Cencicienta',2,'WaltDisney','Disney');
-let Book3= new Books('geissha del futuro',3,'Victoria','el buho');
-let Book4= new Books('empresario atrevido',4,'jhon lenon','casa bonita');
-let Book5= new Books('humana a conejo',5,'yukio','casa bonita');
-let Book6= new Books('humana a pajaro',6,'yukio','casa bonita');
+// Llenar la pila con ejemplos de libros
+bookStack.push(new Books('Crepúsculo', 1, 'Stephenie Meyer', 'El Búho'));
+bookStack.push(new Books('Cenicienta', 2, 'Walt Disney', 'Disney'));
+bookStack.push(new Books('Geisha del Futuro', 3, 'Victoria', 'El Búho'));
+bookStack.push(new Books('Empresario Atrevido', 4, 'John Lennon', 'Casa Bonita'));
+bookStack.push(new Books('Humana a Conejo', 5, 'Yukio', 'Casa Bonita'));
+bookStack.push(new Books('Humana a Pájaro', 6, 'Yukio', 'Casa Bonita'));
 
-
-function printTODOs(todo) {
-    while (todo) {
-      console.log("Title:", todo.title);
-      console.log("Description:", todo.description);
-      console.log("Points to:", todo.pointsToNext ? todo.pointsToNext.title : "None");
-      console.log("\n");
-      todo = todo.pointsToNext;
-    }
+// Función para imprimir los libros en la pila
+function printBooks(stack) {
+  while (stack.length > 0) {
+      let book = stack.pop();  // Extraer el último libro de la pila
+      console.log("Nombre:", book.Name);
+      console.log("ISBN:", book.ISBN);
+      console.log("Autor:", book.Author);
+      console.log("Editorial:", book.Editorial);
+      console.log("////////////");
   }
+}
 
-printTODOs(todo);
+// Llamada a la función para imprimir los libros
+printBooks(bookStack);
+
