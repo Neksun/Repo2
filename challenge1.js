@@ -7,9 +7,9 @@ class TODO{
 
     }
 }
-const TODO1 = new TODO ("the cat", "this is a cat",)
-const TODO2 = new TODO ("the dog", "this is a dog", TODO1 )
-const TODO3 = new TODO ("the bird", "this is a bird", TODO2 )
+const TODO1 = new TODO ("food for the cat", "tomorrow buy 1kg of food",)
+const TODO2 = new TODO ("food for the cat", "tomorrow buy 1kg of food", TODO1 )
+const TODO3 = new TODO ("my food", "friday 9am", TODO2 )
 
 function TODOs(head) {
     let current = head;
