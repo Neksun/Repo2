@@ -1,4 +1,4 @@
-
+//N-ary version Karol payares 2221343
 class Node {
     constructor(name, birthdate, depth) {
         this.name = name;
