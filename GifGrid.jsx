@@ -1,4 +1,34 @@
+//esto va en components karol 2221343
+import {getGifs} from ".../helpers/getGifs";
+import { useEffect, useState} from "react";
+import {GifItem} from "./GifItem";
 
+export const GifGrid = ({ category }) => {
+    const [images, setImages] = useState([]);
+
+    const getImages = async () => {
+      const images = await getGifs(category);
+      setImages(images);
+    };
+  
+    // useEffect para ejecutar getImages cuando el componente se monta o cuando cambia la categoría
+    useEffect(() => {
+      getImages();
+    }, [category]);
+  
+    // Retorna el JSX para renderizar la grilla de GIFs
+    return (
+      <div>
+        <h3> {category} </h3>
+        <div className="card-grid">
+          {images.map((image, key) => {
+            return<GifItem key={key} {...image} ></GifItem>
+      })
+          }
+        </div>
+      </div>
+    );
+  };
 /*
 // Función asíncrona para obtener GIFs desde la API de Giphy
 const getGifs = async (category) => {
@@ -18,7 +48,6 @@ const getGifs = async (category) => {
     // Retornamos el array de GIFs
     return gifs;
   };
-
 
 
 export const GifGrid = ({ category }) => {
@@ -67,7 +96,7 @@ export const GifGrid = ({ category }) => {
       </div>
     </>
   );
-};*/
+};
 
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifItem } from "./Gifitem";
@@ -84,4 +113,4 @@ export const GifGrid = ({category}) =>{
             })}</div>
         </>
     )
-}
+}*/
