@@ -11,3 +11,4 @@ function App(){
   <span>10</span>
     </>)
 }
+ export default FirstApp
