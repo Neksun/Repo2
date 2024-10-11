@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(['first category']);
+  const [categories, setCategories] = useState(['primera categoria']);
   const [category, setCategory] = useState('');
 
   const onAddCategory = () => {
@@ -16,7 +16,7 @@ export const GifExpertApp = () => {
 
   return (
     <>
-      <h1>GifExpert</h1>
+      <h1>GifExpert categorias</h1>
       <input type="text"  value={category} onChange={(event)=> onSetCategory(event)}></input>
       <button onClick={()=>onAddCategory()}>addnew</button>
       <br></br>
