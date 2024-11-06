@@ -8,7 +8,7 @@ const TodoList = ({ todos = [], handleDelete, handleToggle }) => {
           key={todo.id}
           todo={todo}
           handleDelete={handleDelete}
-          handleToggle={handleToggle} // Pasar handleToggle aquí
+          handleToggle={handleToggle} 
         />
       ))}
     </ul>
