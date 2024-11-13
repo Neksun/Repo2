@@ -4,7 +4,7 @@ import './index.css';
 import { TodoApp } from './TodoApp';
 import reportWebVitals from './reportWebVitals';
 //import { GifExpertApp } from './ComponentApp';
-import { Parent } from './components/Parent';
+//import { Parent } from './components/Parent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
