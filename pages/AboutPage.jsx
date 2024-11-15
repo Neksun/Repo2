@@ -4,7 +4,7 @@ export const AboutPage = () => {
     return (
         <div className="page-container">
             <h1>About Page</h1>
-            <p>Quibo</p>
+            <p>esta es la pagina donde pones cosas</p>
         </div>
     );
 };
